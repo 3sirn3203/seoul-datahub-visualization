@@ -4,13 +4,14 @@ import SectionTitle from './components/SectionTitle'
 import ChartCard from './components/ChartCard'
 import PetRateTimeseries from './charts/PetRateTimeseries'
 import SeoulChoropleth from './charts/SeoulChoropleth'
+import HousingTypePie from './charts/HousingTypePie'
 
 export default function App() {
     return (
         <div className="min-h-screen bg-surface text-title font-sans">
             <Header
                 title="서울시 반려동물 대시보드 (가제)"
-                subtitle="Team 김대영 김우진 이재용"
+                subtitle="Team 동물의숲 (김대영 김우진 이재용)"
             />
 
             <main className="w-full py-8">
@@ -29,21 +30,15 @@ export default function App() {
                             description="차트 컴포넌트를 분리해 유지보수성과 재사용성을 높입니다."
                         />
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                            <ChartCard title="자치구별 반려동물 등록 현황 (예정)">
-                                <div className="h-[260px] flex items-center justify-center text-muted">(BarChart 자리)</div>
+
+                            <HousingTypePie />
+
+                            <ChartCard title="가구원수별 반려동물 가구 수">
+                                <div className="h-[300px] flex items-center justify-center text-muted">
+                                    (Stacked BarChart 자리 - 개/고양이/기타)
+                                </div>
                             </ChartCard>
 
-                            <ChartCard title="연도별 등록 추세 (예정)">
-                                <div className="h-[260px] flex items-center justify-center text-muted">(LineChart 자리)</div>
-                            </ChartCard>
-
-                            <ChartCard title="반려동물 관련 시설 분포 (예정)">
-                                <div className="h-[320px] flex items-center justify-center text-muted">(지도/Scatter 자리)</div>
-                            </ChartCard>
-
-                            <ChartCard title="민원/안전 관련 지표 (예정)">
-                                <div className="h-[320px] flex items-center justify-center text-muted">(Pie/Heatmap 자리)</div>
-                            </ChartCard>
                         </div>
                     </section>
 
