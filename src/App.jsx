@@ -1,12 +1,12 @@
 import React from 'react'
 import Header from './components/Header'
 import SectionTitle from './components/SectionTitle'
-import ChartCard from './components/ChartCard'
 import PetRateTimeseries from './charts/PetRateTimeseries'
 import SeoulChoropleth from './charts/SeoulChoropleth'
 import HousingTypePie from './charts/HousingTypePie'
 import HousingMemWithPetType from './charts/HousingMemWithPetType'
 import PetTypePie from './charts/PetTypePie'
+import RegionBreedBar from './charts/RegionBreedBar'
 
 export default function App() {
     return (
@@ -36,7 +36,7 @@ export default function App() {
                         </div>
                     </section>
 
-                    <section className="space-y-4">
+                    <section className="space-y-4 mt-8">
                         <SectionTitle
                             title="세부 분석"
                             description="차트 컴포넌트를 분리해 유지보수성과 재사용성을 높입니다."
@@ -46,7 +46,7 @@ export default function App() {
                                 <PetTypePie />
                             </div>
                             <div className="col-span-2">
-                                Mock-up
+                                <RegionBreedBar />
                             </div>
                         </div>
                     </section>

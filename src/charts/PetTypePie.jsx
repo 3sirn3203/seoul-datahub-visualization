@@ -64,8 +64,8 @@ export default function PetTypePie() {
     };
 
     return (
-        <section className="card p-4">
-            <div className="flex items-center justify-between mb-3">
+        <section className="card p-4 h-full flex flex-col">
+            <div className="mb-3">
                 <div>
                     <h3 className="font-medium text-title">개 vs 고양이</h3>
                     <p className="text-sm text-muted">
