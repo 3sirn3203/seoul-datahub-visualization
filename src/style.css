@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    html,
+    body,
+    #root {
+        width: 100%;
+        height: 100%;
+    }
+
+    body {
+        @apply bg-brand-bg text-slate-800 font-sans antialiased;
+    }
+
+    a {
+        @apply text-inherit no-underline;
+    }
+
+    button {
+        @apply cursor-pointer font-sans;
+    }
+}
+
+@layer base {
+
+    .bg-surface {
+        @apply bg-brand-bg;
+    }
+
+    .text-title {
+        @apply text-slate-800;
+    }
+
+    .text-muted {
+        @apply text-slate-500;
+    }
+
+    .border-subtle {
+        @apply border-brand-border;
+    }
+}
+
+@layer components {
+    .card {
+        @apply bg-brand-card border border-brand-border rounded-xl shadow-card;
+    }
+}
