@@ -2,27 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body,
-#root {
-    width: 100%;
-    min-height: 100%;
-    margin: 0;
-    padding: 0;
+/* 전역 기초 스타일 */
+@layer base {
+
+    html,
+    body,
+    #root {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* 페이지 전역 배경/폰트/가독성 */
+    body {
+        @apply bg-brand-bg text-slate-800 font-sans antialiased;
+    }
+
+    a {
+        @apply text-inherit no-underline;
+    }
+
+    button {
+        @apply cursor-pointer font-sans;
+    }
+
+    /* === 토큰 유틸 === */
+    .bg-surface {
+        @apply bg-brand-bg;
+    }
+
+    .text-title {
+        @apply text-slate-800;
+    }
+
+    .text-muted {
+        @apply text-slate-500;
+    }
+
+    .border-subtle {
+        @apply border-brand-border;
+    }
 }
 
-body {
-    display: block;
-    min-width: 0;
-    background: #f7f7f7;
-    color: #111827;
-}
-
-:root {
-    color: #111827;
-    background: #ffffff;
-    line-height: 1.5;
-    font-weight: 400;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+/* 재사용 카드 */
+@layer components {
+    .card {
+        @apply bg-brand-card border border-brand-border rounded-xl shadow-card;
+    }
 }

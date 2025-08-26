@@ -1,17 +1,19 @@
-import React from "react";
+import React from 'react'
 
-export default function ChartCard({ title, kpi, note, children }) {
+export default function ChartCard({ title, kpi, note, children, className = '' }) {
     return (
-        <div className="p-4 bg-white rounded-2xl shadow-sm">
+        <section className={`card ${className}`}>
             <div className="flex items-center justify-between mb-2">
-                <h3 className="font-medium">{title}</h3>
-                {/* 필요 시 우측 토글/필터 자리 */}
+                <h3 className="font-medium text-title">{title}</h3>
             </div>
-            {typeof kpi !== "undefined" && (
-                <div className="text-2xl font-semibold mt-2 mb-3">{kpi}</div>
+
+            {kpi !== undefined && (
+                <div className="text-2xl font-semibold text-title mt-2 mb-3">{kpi}</div>
             )}
+
             {children}
-            {note && <div className="text-xs text-gray-400 mt-3">{note}</div>}
-        </div>
-    );
+
+            {note && <div className="text-xs text-muted mt-3">{note}</div>}
+        </section>
+    )
 }
