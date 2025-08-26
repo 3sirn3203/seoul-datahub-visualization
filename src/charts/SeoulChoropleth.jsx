@@ -94,6 +94,7 @@ export default function SeoulChoropleth() {
     const [hoverInfo, setHoverInfo] = useState(null); // {name, value, x, y}
 
     const isPercentMetric = DATASETS[metric].label === "반려동물 가구 비율";
+    const isAnimalCnt = DATASETS[metric].label === "유기동물";
     const formatValue = (v) =>
         isPercentMetric ? `${Number(v).toFixed(1)}%` : Number(v).toLocaleString();
 
@@ -213,31 +214,55 @@ export default function SeoulChoropleth() {
                                         // 중심점 계산 (경도/위도)
                                         const [lon, lat] = geoCentroid(g);
 
-                                        // 중심점이 너무 겹치는 도심권 몇몇 구는 살짝 위치 보정 (선택/옵션)
+                                        // 위치 보정 (필요한 구만 살짝 이동)
                                         const tweak = ({
                                             종로구: { dx: 0, dy: -4 },
                                             중구: { dx: 0, dy: 8 },
                                             용산구: { dx: 0, dy: 6 },
                                         })[name] || { dx: 0, dy: 0 };
 
+                                        // 해당 구의 값과 라벨 텍스트
+                                        const v = valueMap.get(name) ?? 0;
+                                        const valueText = isPercentMetric
+                                            ? `${Number(v).toFixed(1)}%`
+                                            : isAnimalCnt ? `${Number(v).toLocaleString()}마리` : `${Number(v).toLocaleString()}개`;
+
                                         return (
                                             <Marker key={`${g.rsmKey}-label`} coordinates={[lon, lat]}>
-                                                {/* 텍스트 외곽선(가독성) */}
+                                                {/* ① 구 이름 */}
                                                 <text
                                                     textAnchor="middle"
-                                                    y={tweak.dy}
                                                     x={tweak.dx}
+                                                    y={tweak.dy - 4}   // 이름은 조금 위
                                                     style={{
-                                                        fontSize: 10,
-                                                        fontWeight: 600,
+                                                        fontSize: 11,
+                                                        fontWeight: 800,
                                                         paintOrder: "stroke",
                                                         stroke: "white",
                                                         strokeWidth: 3,
-                                                        fill: "#0f172a", // slate-900
+                                                        fill: "#0f172a",
                                                         pointerEvents: "none",
                                                     }}
                                                 >
                                                     {name}
+                                                </text>
+
+                                                {/* ② 값 라벨 (이름 아래) */}
+                                                <text
+                                                    textAnchor="middle"
+                                                    x={tweak.dx}
+                                                    y={tweak.dy + 12}   // 값은 이름보다 아래
+                                                    style={{
+                                                        fontSize: 11,
+                                                        fontWeight: 800,
+                                                        paintOrder: "stroke",
+                                                        stroke: "white",
+                                                        strokeWidth: 3,
+                                                        fill: "#0f172a",
+                                                        pointerEvents: "none",
+                                                    }}
+                                                >
+                                                    {valueText}
                                                 </text>
                                             </Marker>
                                         );
