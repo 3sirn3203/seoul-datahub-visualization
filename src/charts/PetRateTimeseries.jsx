@@ -2,7 +2,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import * as XLSX from "xlsx";
 import {
-    LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend,
+    BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend,
 } from "recharts";
 
 /** 엑셀 파일 경로 (public/) */
@@ -169,7 +169,7 @@ export default function PetRateTimeseries() {
 
             <div style={{ width: "100%", height: 360 }}>
                 <ResponsiveContainer>
-                    <LineChart data={series} margin={{ top: 12, right: 36, bottom: 24, left: 12 }}>
+                    <BarChart data={series} margin={{ top: 12, right: 36, bottom: 24, left: 12 }}>
                         <CartesianGrid strokeDasharray="3 3" />
                         <XAxis
                             dataKey="year"
@@ -180,22 +180,22 @@ export default function PetRateTimeseries() {
                             tickMargin={8}
                         />
                         <YAxis
-                            domain={[0, "auto"]}
+                            domain={[
+                                (dataMin) => dataMin * 0.9,
+                                (dataMax) => dataMax * 1.1
+                            ]}
                             tickFormatter={v => `${v.toFixed(2)}%`}
                             tickMargin={8}
                         />
                         <Tooltip formatter={(v) => `${v.toFixed(2)}%`} labelFormatter={(l) => `${l}년`} />
                         <Legend />
-                        <Line
-                            type="monotone"
+                        <Bar
                             dataKey="rate"
                             name={`${selected} 보유 비율`}
-                            stroke="#1F5EEE"
-                            dot={false}
-                            strokeWidth={2}
-                            isAnimationActive={false}
+                            fill="#1F5EEE"
+                            barSize={30}
                         />
-                    </LineChart>
+                    </BarChart>
                 </ResponsiveContainer>
             </div>
 
