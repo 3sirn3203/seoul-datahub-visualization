@@ -161,11 +161,11 @@ export default function SeoulChoropleth() {
                 </div>
             </div>
 
-            <div className="w-full h-[520px] bg-white rounded-xl">
+            <div className="w-full h-[480px] md:h-[600px] lg:h-[600px] bg-white rounded-xl">
                 {geo ? (
                     <ComposableMap
                         projection="geoMercator"
-                        projectionConfig={{ center: [127.0, 37.56], scale: 70000 }}
+                        projectionConfig={{ center: [127.0, 37.56], scale: 72000 }}
                         width={980}
                         height={600}
                         style={{ width: "100%", height: "100%" }}
