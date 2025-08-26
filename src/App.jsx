@@ -3,7 +3,7 @@ import Header from './components/Header'
 import SectionTitle from './components/SectionTitle'
 import ChartCard from './components/ChartCard'
 import PetRateTimeseries from './charts/PetRateTimeseries'
-import PetOwnershipPie from './charts/PetOwnershipPie'
+import SeoulChoropleth from './charts/SeoulChoropleth'
 
 export default function App() {
     return (
@@ -19,23 +19,9 @@ export default function App() {
                         <PetRateTimeseries />
                     </div>
 
-                    <section className="mb-8">
-                        <SectionTitle
-                            title="개요"
-                            description="서울시 반려동물 등록 현황, 시설 분포, 민원·안전 데이터 등을 통합 시각화합니다."
-                        />
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            <div className="mb-8">
-                                <PetOwnershipPie />
-                            </div>
-                            <div className="mb-8">
-                                <PetOwnershipPie />
-                            </div>
-                            <div className="mb-8">
-                                <PetOwnershipPie />
-                            </div>
-                        </div>
-                    </section>
+                    <div className="mb-8">
+                        <SeoulChoropleth />
+                    </div>
 
                     <section className="space-y-4">
                         <SectionTitle

@@ -174,7 +174,7 @@ export default function PetRateTimeseries() {
                         />
                         <YAxis
                             domain={[
-                                0,
+                                (dataMin) => Math.ceil(dataMin * 0.9),
                                 (dataMax) => Math.ceil(dataMax * 1.1) // 여유 10%
                             ]}
                             tickFormatter={(v) => Number(v).toLocaleString('ko-KR')} // 23,504

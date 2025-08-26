@@ -19,12 +19,15 @@
     "@deck.gl/core": "^9.1.14",
     "@deck.gl/layers": "^9.1.14",
     "@deck.gl/react": "^9.1.14",
+    "d3-scale": "^4.0.2",
+    "d3-scale-chromatic": "^3.1.0",
     "daisyui": "^5.0.50",
     "deck.gl": "^9.1.14",
     "mapbox-gl": "^2.15.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-map-gl": "^7.1.9",
+    "react-simple-maps": "^3.0.0",
     "recharts": "^2.15.4",
     "xlsx": "^0.18.5"
   }
