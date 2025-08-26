@@ -8,7 +8,7 @@ import pandas as pd
 
 # === 설정 ===
 # JSON 파일 경로
-JSON_PATH = Path("seoul_pet_pharmacy.json")  # 필요 시 절대/상대경로 수정
+JSON_PATH = Path("./data/seoul_pet_pharmacy.json")  # 필요 시 절대/상대경로 수정
 # 결과 엑셀 경로
 OUT_XLSX = Path("./public/data/pet_pharmacy.xlsx")
 

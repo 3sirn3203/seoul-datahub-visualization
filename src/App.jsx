@@ -6,6 +6,7 @@ import PetRateTimeseries from './charts/PetRateTimeseries'
 import SeoulChoropleth from './charts/SeoulChoropleth'
 import HousingTypePie from './charts/HousingTypePie'
 import HousingMemWithPetType from './charts/HousingMemWithPetType'
+import PetTypePie from './charts/PetTypePie'
 
 export default function App() {
     return (
@@ -20,7 +21,6 @@ export default function App() {
                     <div className="mb-8">
                         <PetRateTimeseries />
                     </div>
-
                     <div className="mb-8">
                         <SeoulChoropleth />
                     </div>
@@ -31,17 +31,25 @@ export default function App() {
                             description="차트 컴포넌트를 분리해 유지보수성과 재사용성을 높입니다."
                         />
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-
                             <HousingTypePie />
-
                             <HousingMemWithPetType />
-
                         </div>
                     </section>
 
-                    <footer className="text-xs text-muted pt-8 pb-10">
-                        * 현재는 목업 단계입니다. CSV/API 연결 후 실제 데이터로 대체합니다.
-                    </footer>
+                    <section className="space-y-4">
+                        <SectionTitle
+                            title="세부 분석"
+                            description="차트 컴포넌트를 분리해 유지보수성과 재사용성을 높입니다."
+                        />
+                        <div className="grid grid-cols-3 gap-4">
+                            <div className="col-span-1">
+                                <PetTypePie />
+                            </div>
+                            <div className="col-span-2">
+                                Mock-up
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </main>
         </div>
