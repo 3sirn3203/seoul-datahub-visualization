@@ -3,6 +3,7 @@ import Header from './components/Header'
 import SectionTitle from './components/SectionTitle'
 import ChartCard from './components/ChartCard'
 import PetRateTimeseries from './charts/PetRateTimeseries'
+import PetOwnershipPie from './charts/PetOwnershipPie'
 
 export default function App() {
     return (
@@ -24,7 +25,9 @@ export default function App() {
                             description="서울시 반려동물 등록 현황, 시설 분포, 민원·안전 데이터 등을 통합 시각화합니다."
                         />
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            <ChartCard title="등록 반려동물 수 (누적)" kpi="—" note="데이터 연결 전" />
+                            <div className="mb-8">
+                                <PetOwnershipPie />
+                            </div>
                             <ChartCard title="자치구 평균 등록률" kpi="—" note="데이터 연결 전" />
                             <ChartCard title="유기·입양 비율" kpi="—" note="데이터 연결 전" />
                         </div>

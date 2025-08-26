@@ -28,15 +28,6 @@ function toNumber(v) {
     return Number.isFinite(num) ? num : NaN;
 }
 
-/**
- * 하드코딩 레이아웃
- * - yearIndex: 연도 인덱스 시작 위치 (col, row). 여기서 가로/세로 두 방향 모두 시도해서 더 "그럴듯한" 쪽 채택
- * - districtIndex: 자치구 인덱스가 세로로 늘어나는 시작 위치 (col, row)
- * - dataTopLeft: 데이터 매트릭스의 좌상단 (첫 자치구, 첫 연도에 해당하는 셀)
- *
- * 당신이 설명한 값 기준(“연도: 3열 1행에서 시작”, “자치구: 2열 9행에서 시작”)
- * 을 기본값으로 넣어뒀습니다. 실제 파일에서 다르면 아래 숫자만 바꾸세요.
- */
 const LAYOUT = {
     yearIndex: { col: 3, row: 1 },  // C1
     districtIndex: { col: 2, row: 9 }, // B9
@@ -110,16 +101,11 @@ export default function PetRateTimeseries() {
                 }
 
                 // 2) 데이터 매트릭스 읽기
-                //   - years가 "right"이면: (row 고정, col 증가) = 일반적인 '가로 헤더'
-                //   - years가 "down"이면:   (row 증가, col 고정) = 세로 헤더
                 let data = [];
                 if (yearDir === "right") {
                     // top-left에서 (행: 자치구 수, 열: 연도 수)
                     data = readMatrix(ws, LAYOUT.dataTopLeft.col, LAYOUT.dataTopLeft.row, districtList.length, yearList.length);
                 } else {
-                    // 세로로 연도 진행 => 데이터도 세로로 누적된 형태라고 가정
-                    // 이 경우 top-left는 (첫 연도, 첫 자치구) 교차점으로 간주하고
-                    //   행: 연도 수, 열: 자치구 수 로 읽어온 뒤 전치(transpose)해서 [district][year] 로 변환
                     const tmp = readMatrix(ws, LAYOUT.dataTopLeft.col, LAYOUT.dataTopLeft.row, yearList.length, districtList.length);
                     // 전치
                     const transposed = Array.from({ length: districtList.length }, (_, i) =>
@@ -161,7 +147,11 @@ export default function PetRateTimeseries() {
                 </div>
 
                 <div className="flex items-center gap-2">
-                    <select className="border border-subtle rounded-lg px-3 py-2" value={selected} onChange={e => setSelected(e.target.value)}>
+                    <select
+                        className="min-w-[120px] h-10 px-3 rounded-lg border border-subtle bg-white text-base leading-none"
+                        value={selected}
+                        onChange={e => setSelected(e.target.value)}
+                    >
                         {districts.map(d => <option key={d} value={d}>{d}</option>)}
                     </select>
                 </div>
