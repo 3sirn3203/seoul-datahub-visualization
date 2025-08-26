@@ -5,6 +5,7 @@ import ChartCard from './components/ChartCard'
 import PetRateTimeseries from './charts/PetRateTimeseries'
 import SeoulChoropleth from './charts/SeoulChoropleth'
 import HousingTypePie from './charts/HousingTypePie'
+import HousingMemWithPetType from './charts/HousingMemWithPetType'
 
 export default function App() {
     return (
@@ -33,11 +34,7 @@ export default function App() {
 
                             <HousingTypePie />
 
-                            <ChartCard title="가구원수별 반려동물 가구 수">
-                                <div className="h-[300px] flex items-center justify-center text-muted">
-                                    (Stacked BarChart 자리 - 개/고양이/기타)
-                                </div>
-                            </ChartCard>
+                            <HousingMemWithPetType />
 
                         </div>
                     </section>
