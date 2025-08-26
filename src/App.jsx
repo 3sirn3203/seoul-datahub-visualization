@@ -28,8 +28,12 @@ export default function App() {
                             <div className="mb-8">
                                 <PetOwnershipPie />
                             </div>
-                            <ChartCard title="자치구 평균 등록률" kpi="—" note="데이터 연결 전" />
-                            <ChartCard title="유기·입양 비율" kpi="—" note="데이터 연결 전" />
+                            <div className="mb-8">
+                                <PetOwnershipPie />
+                            </div>
+                            <div className="mb-8">
+                                <PetOwnershipPie />
+                            </div>
                         </div>
                     </section>
 

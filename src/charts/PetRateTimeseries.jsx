@@ -30,8 +30,8 @@ function toNumber(v) {
 
 const LAYOUT = {
     yearIndex: { col: 3, row: 1 },  // C1
-    districtIndex: { col: 2, row: 9 }, // B9
-    dataTopLeft: { col: 3, row: 9 },  // C9 : (첫 연도, 첫 자치구) 교차점
+    districtIndex: { col: 2, row: 4 }, // B9
+    dataTopLeft: { col: 3, row: 4 },  // C9 : (첫 연도, 첫 자치구) 교차점
 };
 
 /** 시트에서 한 방향(가로/세로)으로 인덱스 읽기 */
@@ -140,7 +140,10 @@ export default function PetRateTimeseries() {
         <section className="card p-4">
             <div className="flex items-center justify-between mb-3">
                 <div>
-                    <h3 className="font-medium text-title">자치구별 반려동물 보유 가구 비율 (2014–2024)</h3>
+                    {/* 제목을 '가구 수'로 변경 (선택) */}
+                    <h3 className="font-medium text-title">
+                        자치구별 반려동물 보유 가구 수 (2015–2024)
+                    </h3>
                     <p className="text-sm text-muted">
                         *2015, 2018년 데이터 부재로 평균값으로 대체
                     </p>
@@ -159,7 +162,7 @@ export default function PetRateTimeseries() {
 
             <div style={{ width: "100%", height: 360 }}>
                 <ResponsiveContainer>
-                    <BarChart data={series} margin={{ top: 12, right: 36, bottom: 24, left: 12 }}>
+                    <BarChart data={series} margin={{ top: 12, right: 36, bottom: 24, left: 36 }}>
                         <CartesianGrid strokeDasharray="3 3" />
                         <XAxis
                             dataKey="year"
@@ -171,17 +174,20 @@ export default function PetRateTimeseries() {
                         />
                         <YAxis
                             domain={[
-                                (dataMin) => dataMin * 0.9,
-                                (dataMax) => dataMax * 1.1
+                                0,
+                                (dataMax) => Math.ceil(dataMax * 1.1) // 여유 10%
                             ]}
-                            tickFormatter={v => `${v.toFixed(2)}%`}
+                            tickFormatter={(v) => Number(v).toLocaleString('ko-KR')} // 23,504
                             tickMargin={8}
                         />
-                        <Tooltip formatter={(v) => `${v.toFixed(2)}%`} labelFormatter={(l) => `${l}년`} />
+                        <Tooltip
+                            formatter={(v) => `${Number(v).toLocaleString('ko-KR')} 가구`}
+                            labelFormatter={(l) => `${l}년`}
+                        />
                         <Legend />
                         <Bar
                             dataKey="rate"
-                            name={`${selected} 보유 비율`}
+                            name={`${selected} 반려동물 보유 가구 수`}
                             fill="#1F5EEE"
                             barSize={30}
                         />
