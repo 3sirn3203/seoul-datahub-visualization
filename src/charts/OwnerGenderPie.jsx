@@ -105,7 +105,7 @@ export default function OwnerGenderPie() {
                             formatter={(value, name) => {
                                 const v = Number(value) || 0;
                                 const pct = total ? ((v / total) * 100).toFixed(1) : "0.0";
-                                return [`${v.toLocaleString()} 가구`, `${name} (${pct}%)`];
+                                return [`${v.toLocaleString()} 명`, `${name} (${pct}%)`];
                             }}
                         />
                         <Legend verticalAlign="bottom" align="center" iconType="circle" />
