@@ -149,7 +149,7 @@ export default function SeoulChoropleth() {
         <section className="card p-4">
             <div className="flex items-center justify-between mb-3">
                 <div>
-                    <h3 className="chart-title">서울시 자치구별 지표 히트맵</h3>
+                    <h3 className="chart-title">지도로 살펴보는 서울시 반려동물 현황</h3>
                     <p className="text-sm text-muted">
                         {subtitleMap[DATASETS[metric].label] || "2024년 기준 서울시 현황"}
                     </p>

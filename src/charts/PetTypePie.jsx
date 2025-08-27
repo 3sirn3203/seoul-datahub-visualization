@@ -74,7 +74,7 @@ export default function PetTypePie() {
                 </div>
             </div>
 
-            <div style={{ width: "100%", height: 320 }}>
+            <div style={{ width: "100%", height: 340 }}>
                 <ResponsiveContainer>
                     <PieChart>
                         {/* 중앙 총합 */}

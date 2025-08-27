@@ -69,7 +69,7 @@ export default function HousingMemWithPetType() {
         <h3 className="chart-title">가구원수별 반려동물 가구 수</h3>
       </div>
 
-      <div style={{ width: "100%", height: 360 }}>
+      <div style={{ width: "100%", height: 340 }}>
         <ResponsiveContainer>
           <BarChart
             data={rows}

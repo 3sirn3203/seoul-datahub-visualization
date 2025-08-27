@@ -64,7 +64,7 @@ export default function OwnerGenderPie() {
                 <p className="text-sm text-muted">서울시 기준 남성/여성 가구 수 분포</p>
             </div>
 
-            <div style={{ width: "100%", height: 310 }}>
+            <div style={{ width: "100%", height: 340 }}>
                 <ResponsiveContainer>
                     <PieChart>
                         {/* 도넛 중앙 총합 (살짝 위로) */}

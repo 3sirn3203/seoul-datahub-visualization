@@ -197,7 +197,7 @@ export default function RegionBreedBar() {
       </div>
 
       {/* 차트 */}
-      <div style={{ width: "100%", height: 360 }}>
+      <div style={{ width: "100%", height: 340 }}>
         {chartData.length === 0 ? (
           <div className="w-full h-full flex items-center justify-center text-muted">
             {canQuery ? "조회 버튼을 눌러 결과를 확인하세요." : "대상과 자치구를 선택하세요."}
@@ -206,7 +206,7 @@ export default function RegionBreedBar() {
           <ResponsiveContainer>
             <BarChart
               data={chartData}
-              margin={{ top: 12, right: 24, bottom: 48, left: 12 }}
+              margin={{ top: 24, right: 24, bottom: 12, left: 12 }}
             >
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis

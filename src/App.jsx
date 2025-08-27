@@ -17,15 +17,22 @@ export default function App() {
             <Header
                 title="우리 동네 반려동물 정보 한눈에 보기"
                 subtitle="Team 동물의숲 (김대영 김우진 이재용)"
+                styleType="bg"
             />
 
             <main className="w-full py-8">
                 <div className="mx-auto w-full max-w-screen-2xl px-4 md:px-6 lg:px-8">
-                    <div className="mb-8">
+                    <div className="relative mb-12">
                         <PetRateTimeseries />
+                        <div className="absolute top-full right-0 mt-2 text-xs text-muted pointer-events-none">
+                            여기는 주석입니다. 데이터 출처
+                        </div>
                     </div>
-                    <div className="mb-8">
+                    <div className="relative mb-8">
                         <SeoulChoropleth />
+                        <div className="absolute top-full right-0 mt-2 text-xs text-muted pointer-events-none">
+                            여기는 주석입니다. 데이터 출처
+                        </div>
                     </div>
 
                     <section className="space-y-4">
@@ -34,8 +41,18 @@ export default function App() {
                             description="차트 컴포넌트를 분리해 유지보수성과 재사용성을 높입니다."
                         />
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                            <AdoptionTypePie />
-                            <HousingMemWithPetType />
+                            <div className="relative mb-12">
+                                <AdoptionTypePie />
+                                <div className="absolute top-full right-0 mt-2 text-xs text-muted pointer-events-none">
+                                    여기는 주석입니다. 데이터 출처
+                                </div>
+                            </div>
+                            <div className="relative mb-12">
+                                <HousingMemWithPetType />
+                                <div className="absolute top-full right-0 mt-2 text-xs text-muted pointer-events-none">
+                                    여기는 주석입니다. 데이터 출처
+                                </div>
+                            </div>
                         </div>
                     </section>
 
@@ -45,9 +62,24 @@ export default function App() {
                             description="차트 컴포넌트를 분리해 유지보수성과 재사용성을 높입니다."
                         />
                         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-                            <HousingTypePie />
-                            <OwnerGenderPie />
-                            <OwnerAgePie />
+                            <div className="relative mb-12">
+                                <HousingTypePie />
+                                <div className="absolute top-full right-0 mt-2 text-xs text-muted pointer-events-none">
+                                    여기는 주석입니다. 데이터 출처
+                                </div>
+                            </div>
+                            <div className="relative mb-12">
+                                <OwnerGenderPie />
+                                <div className="absolute top-full right-0 mt-2 text-xs text-muted pointer-events-none">
+                                    여기는 주석입니다. 데이터 출처
+                                </div>
+                            </div>
+                            <div className="relative mb-12">
+                                <OwnerAgePie />
+                                <div className="absolute top-full right-0 mt-2 text-xs text-muted pointer-events-none">
+                                    여기는 주석입니다. 데이터 출처
+                                </div>
+                            </div>
                         </div>
                     </section>
 
@@ -58,10 +90,20 @@ export default function App() {
                         />
                         <div className="grid grid-cols-3 gap-4">
                             <div className="col-span-1">
-                                <PetTypePie />
+                                <div className="relative mb-12">
+                                    <PetTypePie />
+                                    <div className="absolute top-full right-0 mt-2 text-xs text-muted pointer-events-none">
+                                        여기는 주석입니다. 데이터 출처
+                                    </div>
+                                </div>
                             </div>
                             <div className="col-span-2">
-                                <RegionBreedBar />
+                                <div className="relative mb-12">
+                                    <RegionBreedBar />
+                                    <div className="absolute top-full right-0 mt-2 text-xs text-muted pointer-events-none">
+                                        여기는 주석입니다. 데이터 출처
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </section>
