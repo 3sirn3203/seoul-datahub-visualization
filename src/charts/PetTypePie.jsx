@@ -67,7 +67,7 @@ export default function PetTypePie() {
         <section className="card p-4 h-full flex flex-col">
             <div className="mb-3">
                 <div>
-                    <h3 className="font-medium text-title">개 vs 고양이</h3>
+                    <h3 className="chart-title">개 vs 고양이</h3>
                     <p className="text-sm text-muted">
                         2025년 인식표 신고 기준 개 vs 고양이 비교
                     </p>

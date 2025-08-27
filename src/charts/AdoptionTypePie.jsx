@@ -74,7 +74,7 @@ export default function AdoptionTypePie() {
         <section className="card p-4">
             <div className="flex items-start justify-between mb-3">
                 <div>
-                    <h3 className="font-medium text-title">반려동물 입양 경로 구성</h3>
+                    <h3 className="chart-title">반려동물 입양 경로 구성</h3>
                     <p className="text-sm text-muted">
                         서울시 기준, 입양 경로별 비중(%)을 파이 차트로 나타냅니다.
                     </p>

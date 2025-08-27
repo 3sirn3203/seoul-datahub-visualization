@@ -60,11 +60,11 @@ export default function OwnerGenderPie() {
     return (
         <section className="card p-4">
             <div className="mb-3">
-                <h3 className="font-medium text-title">성별별 가구 수</h3>
+                <h3 className="chart-title">성별별 가구 수</h3>
                 <p className="text-sm text-muted">서울시 기준 남성/여성 가구 수 분포</p>
             </div>
 
-            <div style={{ width: "100%", height: 295 }}>
+            <div style={{ width: "100%", height: 310 }}>
                 <ResponsiveContainer>
                     <PieChart>
                         {/* 도넛 중앙 총합 (살짝 위로) */}

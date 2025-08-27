@@ -141,7 +141,7 @@ export default function PetRateTimeseries() {
             <div className="flex items-center justify-between mb-3">
                 <div>
                     {/* 제목을 '가구 수'로 변경 (선택) */}
-                    <h3 className="font-medium text-title">
+                    <h3 className="chart-title">
                         자치구별 반려동물 보유 가구 수 (2015–2024)
                     </h3>
                     <p className="text-sm text-muted">

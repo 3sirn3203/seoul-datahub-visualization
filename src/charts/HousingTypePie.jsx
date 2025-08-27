@@ -59,7 +59,7 @@ export default function HousingTypePie() {
         <section className="card p-4">
             <div className="flex items-center justify-between mb-3">
                 <div>
-                    <h3 className="font-medium text-title">주거 형태별 가구 수</h3>
+                    <h3 className="chart-title">주거 형태별 가구 수</h3>
                     <p className="text-sm text-muted">
                         2020년 기준 주거 형태별 반려동물 가구 수 현황
                     </p>
@@ -67,7 +67,7 @@ export default function HousingTypePie() {
             </div>
             
 
-            <div style={{ width: "100%", height: 320 }}>
+            <div style={{ width: "100%", height: 340 }}>
                 <ResponsiveContainer>
                     <PieChart>
                         {/* 가운데 총합 */}

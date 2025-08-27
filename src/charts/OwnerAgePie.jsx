@@ -58,13 +58,13 @@ export default function OwnerAgePie() {
     return (
         <section className="card p-4">
             <div className="mb-3">
-                <h3 className="font-medium text-title">연령대별 반려동물 인구</h3>
+                <h3 className="chart-title">연령대별 반려동물 인구</h3>
                 <p className="text-sm text-muted">
                     연령대별 반려동물 인구 수 분포
                 </p>
             </div>
 
-            <div style={{ width: "100%", height: 295 }}>
+            <div style={{ width: "100%", height: 310 }}>
                 <ResponsiveContainer>
                     <PieChart>
                         {/* 중앙 총합 */}

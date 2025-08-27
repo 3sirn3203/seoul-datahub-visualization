@@ -150,7 +150,7 @@ export default function RegionBreedBar() {
     <section className="card p-4">
       <div className="flex items-center justify-between mb-3">
         <div>
-          <h3 className="font-medium text-title">자치구별 품종 분포</h3>
+          <h3 className="chart-title">자치구별 품종 분포</h3>
           <p className="text-sm text-muted">
             엑셀(개/고양이)에서 선택한 자치구의 품종별 마릿수 합계를 보여줍니다.
           </p>
