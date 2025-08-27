@@ -73,7 +73,7 @@ export default function HousingTypePie() {
                         {/* 가운데 총합 */}
                         <text
                             x="50%"
-                            y="45%"
+                            y="42%"
                             textAnchor="middle"
                             dominantBaseline="middle"
                             className="fill-slate-700"

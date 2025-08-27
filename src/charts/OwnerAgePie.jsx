@@ -64,7 +64,7 @@ export default function OwnerAgePie() {
                 </p>
             </div>
 
-            <div style={{ width: "100%", height: 340 }}>
+            <div style={{ width: "100%", height: 295 }}>
                 <ResponsiveContainer>
                     <PieChart>
                         {/* 중앙 총합 */}
