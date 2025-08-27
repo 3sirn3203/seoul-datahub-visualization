@@ -18,7 +18,7 @@ export default function Header({
                     aria-hidden="true"
                 />
                 {/* 가독성용 그라디언트 오버레이 */}
-                <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-white/80" aria-hidden="true" />
+                <div className="absolute inset-0 bg-gradient-to-r from-white via-white/70 to-white/70" aria-hidden="true" />
 
                 <div className="relative mx-auto max-w-screen-2xl w-full h-full flex flex-col items-center justify-center px-4 md:px-6">
                     <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 drop-shadow-sm text-center">
