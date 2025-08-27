@@ -8,6 +8,7 @@ import HousingMemWithPetType from './charts/HousingMemWithPetType'
 import PetTypePie from './charts/PetTypePie'
 import RegionBreedBar from './charts/RegionBreedBar'
 import AdoptionTypePie from './charts/AdoptionTypePie'
+import OwnerGenderPie from './charts/OwnerGenderPie'
 
 export default function App() {
     return (
@@ -44,6 +45,7 @@ export default function App() {
                         />
                         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
                             <HousingTypePie />
+                            <OwnerGenderPie />
                         </div>
                     </section>
 
