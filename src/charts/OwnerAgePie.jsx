@@ -58,9 +58,9 @@ export default function OwnerAgePie() {
     return (
         <section className="card p-4">
             <div className="mb-3">
-                <h3 className="chart-title">연령대별 반려동물 인구</h3>
-                <p className="text-sm text-muted">
-                    연령대별 반려동물 인구 수 분포
+                <h3 className="chart-title">우리 주인님/집사님의 나이는?</h3>
+                <p className="text-sm text-muted pl-8">
+                    2024년 기준 연령대별 반려동물 인구 현황
                 </p>
             </div>
 

@@ -60,8 +60,10 @@ export default function OwnerGenderPie() {
     return (
         <section className="card p-4">
             <div className="mb-3">
-                <h3 className="chart-title">성별별 가구 수</h3>
-                <p className="text-sm text-muted">서울시 기준 남성/여성 가구 수 분포</p>
+                <h3 className="chart-title">우리 주인님/집사님의 성별은?</h3>
+                <p className="text-sm text-muted pl-8">
+                    2023년 기준 성별별 반려동물 인구 현황
+                </p>
             </div>
 
             <div style={{ width: "100%", height: 340 }}>

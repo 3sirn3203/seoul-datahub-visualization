@@ -74,9 +74,9 @@ export default function AdoptionTypePie() {
         <section className="card p-4">
             <div className="flex items-start justify-between mb-3">
                 <div>
-                    <h3 className="chart-title">반려동물 입양 경로 구성</h3>
-                    <p className="text-sm text-muted">
-                        서울시 기준, 입양 경로별 비중(%)을 파이 차트로 나타냅니다.
+                    <h3 className="chart-title">반려동물과 어떻게 만나게 되었을까</h3>
+                    <p className="text-sm text-muted pl-8">
+                        2024년 기준 반려동물 입양 경로 현황
                     </p>
                 </div>
             </div>
@@ -84,7 +84,7 @@ export default function AdoptionTypePie() {
             {/* 차트 + 우측 범례 레이아웃 */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-center">
                 {/* 파이 (구멍 없는 형태) */}
-                <div className="col-span-3" style={{ width: "100%", height: 320 }}>
+                <div className="col-span-3" style={{ width: "100%", height: 340 }}>
                     <ResponsiveContainer>
                         <PieChart margin={{ top: 12, right: 60, bottom: 24, left: 36 }}>
                             <Pie

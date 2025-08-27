@@ -59,9 +59,9 @@ export default function HousingTypePie() {
         <section className="card p-4">
             <div className="flex items-center justify-between mb-3">
                 <div>
-                    <h3 className="chart-title">주거 형태별 가구 수</h3>
-                    <p className="text-sm text-muted">
-                        2020년 기준 주거 형태별 반려동물 가구 수 현황
+                    <h3 className="chart-title">동물들은 이곳에 살고 있어요</h3>
+                    <p className="text-sm text-muted mt-0.5 pl-8">
+                        2020년 기준 거처의 형태별 반려동물 가구 수 현황
                     </p>
                 </div>
             </div>

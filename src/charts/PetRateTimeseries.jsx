@@ -144,8 +144,8 @@ export default function PetRateTimeseries() {
                     <h3 className="chart-title">
                         자치구별 반려동물 보유 가구 수 (2015–2024)
                     </h3>
-                    <p className="text-sm text-muted">
-                        *2015, 2018년 데이터 부재로 평균값으로 대체
+                    <p className="text-sm text-muted pl-8">
+                        2015년부터 2024년까지 서울시 자치구별 반려동물 보유 가구 수 추이
                     </p>
                 </div>
 
