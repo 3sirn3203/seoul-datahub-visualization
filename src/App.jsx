@@ -7,12 +7,13 @@ import HousingTypePie from './charts/HousingTypePie'
 import HousingMemWithPetType from './charts/HousingMemWithPetType'
 import PetTypePie from './charts/PetTypePie'
 import RegionBreedBar from './charts/RegionBreedBar'
+import AdoptionTypePie from './charts/AdoptionTypePie'
 
 export default function App() {
     return (
         <div className="min-h-screen bg-surface text-title font-sans">
             <Header
-                title="서울시 반려동물 대시보드 (가제)"
+                title="우리 동네 반려동물 정보 한눈에 보기"
                 subtitle="Team 동물의숲 (김대영 김우진 이재용)"
             />
 
@@ -31,8 +32,18 @@ export default function App() {
                             description="차트 컴포넌트를 분리해 유지보수성과 재사용성을 높입니다."
                         />
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                            <HousingTypePie />
+                            <AdoptionTypePie />
                             <HousingMemWithPetType />
+                        </div>
+                    </section>
+
+                    <section className="space-y-4 mt-8">
+                        <SectionTitle
+                            title="세부 분석"
+                            description="차트 컴포넌트를 분리해 유지보수성과 재사용성을 높입니다."
+                        />
+                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                            <HousingTypePie />
                         </div>
                     </section>
 

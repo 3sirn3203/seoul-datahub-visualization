@@ -73,7 +73,7 @@ export default function HousingTypePie() {
                         {/* 가운데 총합 */}
                         <text
                             x="50%"
-                            y="50%"
+                            y="45%"
                             textAnchor="middle"
                             dominantBaseline="middle"
                             className="fill-slate-700"
@@ -89,8 +89,8 @@ export default function HousingTypePie() {
                             innerRadius={70}
                             outerRadius={110}
                             paddingAngle={2}
-                            // 레이블은 Recharts가 percent를 줍니다 (여기서는 안전)
-                            label={(p) => `${p.name} ${(p.percent * 100).toFixed(1)}%`}
+                            labelLine={false}
+                            label={false}
                             isAnimationActive={false}
                         >
                             {data.map((_, i) => (

@@ -80,7 +80,7 @@ export default function PetTypePie() {
                         {/* 중앙 총합 */}
                         <text
                             x="50%"
-                            y="50%"
+                            y="48%"
                             textAnchor="middle"
                             dominantBaseline="middle"
                             className="fill-slate-700"

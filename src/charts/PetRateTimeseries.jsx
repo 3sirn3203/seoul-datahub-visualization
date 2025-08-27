@@ -133,7 +133,7 @@ export default function PetRateTimeseries() {
         if (!selected || !districts.length || !years.length || !matrix.length) return [];
         const rowIdx = districts.indexOf(selected);
         if (rowIdx < 0) return [];
-        return years.map((y, i) => ({ year: y, rate: matrix[rowIdx][i] })).filter(d => Number.isFinite(d.rate));
+        return years.map((y, i) => ({ year: y, rate: Math.round(matrix[rowIdx][i]) })).filter(d => Number.isFinite(d.rate));
     }, [selected, districts, years, matrix]);
 
     return (
