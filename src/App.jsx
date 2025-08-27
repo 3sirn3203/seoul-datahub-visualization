@@ -90,7 +90,7 @@ export default function App() {
                                 <div className="relative mb-12">
                                     <PetTypePie />
                                     <div className="absolute top-full right-0 mt-2 text-xs text-muted pointer-events-none">
-                                        [데이터 출처]: 지역별 품종 통계 (농림축산식품부 공공데이터포털)
+                                        [데이터 출처]: 반려동물 등록 현황 (농림축산식품부 공공데이터포털)
                                     </div>
                                 </div>
                             </div>
@@ -98,7 +98,7 @@ export default function App() {
                                 <div className="relative mb-12">
                                     <RegionBreedBar />
                                     <div className="absolute top-full right-0 mt-2 text-xs text-muted pointer-events-none">
-                                        [데이터 출처]: 지역별 품종 통계 (농림축산식품부 공공데이터포털)
+                                        [데이터 출처]: 반려동물 등록 현황 (농림축산식품부 공공데이터포털)
                                     </div>
                                 </div>
                             </div>
